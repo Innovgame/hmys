@@ -13,11 +13,19 @@
         body{
             margin:0;
         }
+        /* 左浮动 */
+        .fl{
+            float: left;
+        }
+        /* 右浮动 */
+        .fr{
+            float: right;
+        }
+
         #header{
-            background-color: yellow;
             height: 80px;
         }
-        img{
+        section>img{
             width: 100%;
             vertical-align: text-top;
         }
@@ -25,12 +33,84 @@
             background-color:red;
             height: 80px;
         }
+        /* 头部 */
+        #header .header-center{
+            width: 1130px;
+            height: 80px;
+            margin: 0 auto;
+        }
+        #header .header-center .header-center-left{
+            margin-top: 12px;
+            height: 56px;
+        }
+        #header .header-center .header-center-right{
+            height: 80px;
+            width: 450px;
+            text-align: right;
+            line-height: 80px;
+            padding-right: 10px;
+        }
+        #header .header-center-right a img{
+            vertical-align: middle;
+        }
+        #header .header-center-right a{
+            text-decoration: none;
+            color: #409ad6;
+            font-size: 18px;
+        }
+        #header .header-center-right a span{
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+
+        /* 尾部 */
+        #footer{
+            height: 30px;
+            background-color: #346699; 
+        }
+        #footer .footer-center{
+            width: 1130px;
+            line-height: 30px;
+            /* background-color: red; */
+            margin: 0 auto;
+            text-align: right;
+        }
+        #footer p{
+            margin-top: 0;
+        }
+        #footer p span{
+            margin-right: 5px;
+            color: #fff;
+            font-size: 12px;
+        }
     </style>
 </head>
 <body>
     <!-- 头部 -->
     <header id="header">
-        头部
+        <!-- 头部中心 -->
+        <div class="header-center">
+            <!-- 中心左部 -->
+            <div class="header-center-left fl">
+                <img src="./img/hmlogo.jpg" alt="logo">
+            </div>
+            <!-- 中心右部 -->
+            <div class="header-center-right fr">
+                <a href="">
+                    <img src="./img/home_icon.png" alt="">
+                    <span>首页</span>
+                </a>
+                <a href="">
+                    <img src="./img/about_icon.png" alt="">
+                    <span>关于我们</span>
+                </a>
+                </a>
+                <a href="">
+                    <img src="./img/contact_icon.png" alt="">
+                    <span>联系我们</span>
+                </a>
+            </div>
+        </div>
     </header>
     <!-- /头部 -->
 
@@ -47,7 +127,14 @@
 
     <!-- 尾部 -->
     <footer id="footer">
-        尾部
+    <div class="footer-center">
+        <p>
+            <span>©2016</span>
+            <span>上海康牙网络科技有限公司</span>
+            <span>沪ICP备15009258号</span>
+            <span>客服热线: 400-040-0423</span>
+        </p>
+    </div>
     </footer>
     <!-- /尾部 -->
 </body>
